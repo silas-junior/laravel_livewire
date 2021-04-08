@@ -19,7 +19,7 @@ class CreateEnrollmentsTable extends Migration
                 ->nullable()
                 ->constrained('students')
                 ->cascadeOnDelete();
-            $table->id();
+            $table->dateTime('enrollment_date')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
