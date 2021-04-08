@@ -14,6 +14,10 @@ class Enrollment extends Model
         'student_id',
     ];
 
+    protected $dates = [
+        'enrollment_date'
+    ];
+
     public function courses()
     {
         $this->belongsTo(Course::class);
