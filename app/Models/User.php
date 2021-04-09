@@ -30,11 +30,11 @@ class User extends Model
 
     public function student()
     {
-        $this->hasOne(Student::class);
+        return $this->hasOne(Student::class);
     }
 
     public function teacher()
     {
-        $this->hasOne(Teacher::class);
+        return $this->hasOne(Teacher::class);
     }
 }

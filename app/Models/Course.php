@@ -16,6 +16,11 @@ class Course extends Model
 
     public function enrollments()
     {
-        $this->hasMany(Enrollment::class);
+        return $this->hasMany(Enrollment::class);
+    }
+
+    public function teacher()
+    {
+        return $this->belongsTo(Teacher::class);
     }
 }

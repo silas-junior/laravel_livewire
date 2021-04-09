@@ -20,11 +20,11 @@ class Enrollment extends Model
 
     public function courses()
     {
-        $this->belongsTo(Course::class);
+        return $this->belongsTo(Course::class);
     }
 
     public function students()
     {
-        $this->belongsTo(Student::class);
+        return $this->belongsTo(Student::class);
     }
 }
