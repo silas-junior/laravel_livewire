@@ -9,13 +9,19 @@ class Enrollment extends Model
 {
     use HasFactory;
 
+    protected $dates = [
+        'enrollment_date'
+    ];
+
     protected $fillable = [
         'course_id',
         'student_id',
     ];
 
-    protected $dates = [
-        'enrollment_date'
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
     ];
 
     public function courses()

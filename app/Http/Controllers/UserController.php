@@ -29,7 +29,7 @@ class UserController extends Controller
         $this->request->validate([
             'name' => 'required|min:3',
             'email' => 'required|unique:users|email ',
-            'birth_date' => 'date',
+            'birth_date' => 'date_format:d-m-Y',
         ]);
 
         $user = new $this->user;

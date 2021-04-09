@@ -23,6 +23,12 @@ class User extends Model
         'birth_date',
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
+
     public function getBirthDateFormatedAttribute()
     {
         return $this->birth_date->format('d/m/Y');

@@ -49,7 +49,7 @@ class StudentController extends Controller
 
     public function show($id)
     {
-        $student = $this->student->findOrFail($id);
+        $student = $this->student->with(['user'])->findOrFail($id);
         return response()->json($student);
     }
 

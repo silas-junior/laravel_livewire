@@ -19,12 +19,12 @@ class EnrollmentController extends Controller
 
     public function index()
     {
-        //
+
     }
 
     public function store()
     {
-        //
+//        $enrollment->enrollment_date = now()->format('Y-m-d H:i:s');
     }
 
     public function show($id)
