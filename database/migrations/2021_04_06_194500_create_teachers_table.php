@@ -19,8 +19,8 @@ class CreateTeachersTable extends Migration
                 ->nullable()
                 ->constrained('courses')
                 ->cascadeOnDelete();
-            $table->softDeletes();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
