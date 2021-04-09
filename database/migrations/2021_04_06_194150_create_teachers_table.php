@@ -15,10 +15,10 @@ class CreateTeachersTable extends Migration
                 ->nullable()
                 ->constrained('users')
                 ->cascadeOnDelete();
-            $table->foreignId('course_id')
-                ->nullable()
-                ->constrained('courses')
-                ->cascadeOnDelete();
+//            $table->foreignId('course_id')
+//                ->nullable()
+//                ->constrained('courses')
+//                ->cascadeOnDelete();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -28,7 +28,6 @@ class CreateTeachersTable extends Migration
     {
         Schema::table('teachers', function (Blueprint $table) {
             $table->dropForeign(['user_id']);
-            $table->dropForeign(['course_id']);
         });
         Schema::dropIfExists('teachers');
     }

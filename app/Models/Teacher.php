@@ -11,7 +11,12 @@ class Teacher extends Model
 
     protected $fillable = [
         'user_id',
-        'course_id',
+    ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
     ];
 
     public function user()

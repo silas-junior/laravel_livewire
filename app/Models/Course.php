@@ -12,6 +12,13 @@ class Course extends Model
     protected $fillable = [
         'title',
         'description',
+        'teacher_id',
+    ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
     ];
 
     public function enrollments()
