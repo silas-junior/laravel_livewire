@@ -19,15 +19,16 @@ class UserController extends Controller
 
     public function index()
     {
+        $users = $this->user->orderBy('id')->get();
 
-//        dd(now()->format('Y-m-d H:i:s'));
+        return response()->json($users);
     }
 
     public function store()
     {
-        $this->validate($this->request, [
+        $this->request->validate([
             'name' => 'required|min:3',
-            'email' => 'required|unique:users|email',
+            'email' => 'required|unique:users|email ',
             'birth_date' => 'date',
         ]);
 
